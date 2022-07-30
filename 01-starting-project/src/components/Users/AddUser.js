@@ -6,8 +6,8 @@ import ErrorModal from "../UI/ErrorModal";
 import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
-  // const nameInputRef = useRef();
-  // const ageInputRef = useRef();
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
 
   const [error, setError] = useState();
 
@@ -30,8 +30,8 @@ const AddUser = (props) => {
       return;
     }
     props.onAddUser(enteredName, enteredUserAge);
-    // nameInputRef.current.value = "";
-    // ageInputRef.current.value = "";
+    nameInputRef.current.value = "";
+    ageInputRef.current.value = "";
   };
 
   const errorHandler = () => {
